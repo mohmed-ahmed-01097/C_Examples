@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1675618486 source:h:\0\new maam\01 - c programming language\01 - lecture\lec projects\static_extern\consol.c
+	<stdio.h>
+	"consol.h"
+
+1675618486 h:\0\new maam\01 - c programming language\01 - lecture\lec projects\static_extern\consol.h
+
+1675618508 source:h:\0\new maam\01 - c programming language\01 - lecture\lec projects\static_extern\main.c
+	<stdio.h>
+	"consol.h"
+
