@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1675615509 source:h:\0\new maam\01 - c programming language\01 - lec\c\printhellp\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1675615509 source:h:\0\new maam\01 - c programming language\01 - lec\c\printhellp\printhello.c
+	"PrintHello.h"
+
+1675615339 h:\0\new maam\01 - c programming language\01 - lec\c\printhellp\printhello.h
+
