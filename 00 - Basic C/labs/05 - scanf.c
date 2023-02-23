@@ -6,12 +6,12 @@ void main (){
     char gender;
 
     printf("Enter Your Name:");
-    scanf("%s",name);
     fflush(stdout);    fflush(stdin);
+    scanf("%s",name);
 
     printf("Enter your Age: ");
-    scanf("%i",&age);
     fflush(stdout);    fflush(stdin);
+    scanf("%i",&age);
 
     printf("Enter your Gender (M,F): ");
     gender = getchar();
