@@ -1,0 +1,421 @@
+   1              		.file	"hello.c"
+   2              		.text
+   3              	Ltext0:
+   5              		.section .rdata,"dr"
+   6              	LC0:
+   7 0000 48656C6C 		.ascii "Hello in England\15\0"
+   7      6F20696E 
+   7      20456E67 
+   7      6C616E64 
+   7      0D00
+   8              	LC1:
+   9 0012 4369616F 		.ascii "Ciao in Italy\15\0"
+   9      20696E20 
+   9      4974616C 
+   9      790D00
+  10              	LC2:
+  11 0021 48616C6C 		.ascii "Hallo in Denmark\15\0"
+  11      6F20696E 
+  11      2044656E 
+  11      6D61726B 
+  11      0D00
+  12              	LC3:
+  13 0033 426F6E6A 		.ascii "Bonjour in France\15\0"
+  13      6F757220 
+  13      696E2046 
+  13      72616E63 
+  13      650D00
+  14              	LC4:
+  15 0046 486F6C61 		.ascii "Hola in Spain\15\0"
+  15      20696E20 
+  15      53706169 
+  15      6E0D00
+  16              	LC5:
+  17 0055 4D617268 		.ascii "Marhaba in Turkey\15\0"
+  17      61626120 
+  17      696E2054 
+  17      75726B65 
+  17      790D00
+  18              		.text
+  19              		.globl	_main
+  21              	_main:
+  22              	LFB10:
+  23              		.file 1 "hello.c"
+   1:hello.c       **** #include <stdio.h>
+   2:hello.c       **** 
+   3:hello.c       **** void main(void){
+  24              		.loc 1 3 0
+  25              		.cfi_startproc
+  26 0000 55       		pushl	%ebp
+  27              		.cfi_def_cfa_offset 8
+  28              		.cfi_offset 5, -8
+  29 0001 89E5     		movl	%esp, %ebp
+  30              		.cfi_def_cfa_register 5
+  31 0003 83E4F0   		andl	$-16, %esp
+  32 0006 83EC10   		subl	$16, %esp
+  33              		.loc 1 3 0
+  34 0009 E8000000 		call	___main
+  34      00
+  35              	LVL0:
+   4:hello.c       ****     printf("Hello in England\r\n");
+  36              		.loc 1 4 0
+  37 000e C7042400 		movl	$LC0, (%esp)
+  37      000000
+  38 0015 E8000000 		call	_puts
+  38      00
+   5:hello.c       ****     printf("Ciao in Italy\r\n");
+  39              		.loc 1 5 0
+  40 001a C7042412 		movl	$LC1, (%esp)
+  40      000000
+  41 0021 E8000000 		call	_puts
+  41      00
+   6:hello.c       ****     printf("Hallo in Denmark\r\n");
+  42              		.loc 1 6 0
+  43 0026 C7042421 		movl	$LC2, (%esp)
+  43      000000
+  44 002d E8000000 		call	_puts
+  44      00
+   7:hello.c       ****     printf("Bonjour in France\r\n");
+  45              		.loc 1 7 0
+  46 0032 C7042433 		movl	$LC3, (%esp)
+  46      000000
+  47 0039 E8000000 		call	_puts
+  47      00
+   8:hello.c       ****     printf("Hola in Spain\r\n");
+  48              		.loc 1 8 0
+  49 003e C7042446 		movl	$LC4, (%esp)
+  49      000000
+  50 0045 E8000000 		call	_puts
+  50      00
+   9:hello.c       ****     printf("Marhaba in Turkey\r\n");
+  51              		.loc 1 9 0
+  52 004a C7042455 		movl	$LC5, (%esp)
+  52      000000
+  53 0051 E8000000 		call	_puts
+  53      00
+  10:hello.c       **** }
+  54              		.loc 1 10 0
+  55 0056 90       		nop
+  56 0057 C9       		leave
+  57              		.cfi_restore 5
+  58              		.cfi_def_cfa 4, 4
+  59 0058 C3       		ret
+  60              		.cfi_endproc
+  61              	LFE10:
+  62              	Letext0:
+  63              		.file 2 "c:/mingw/include/stdio.h"
+  64 0059 909090   		.section	.debug_info,"dr"
+  65              	Ldebug_info0:
+  66 0000 A8010000 		.long	0x1a8
+  67 0004 0400     		.word	0x4
+  68 0006 00000000 		.secrel32	Ldebug_abbrev0
+  69 000a 04       		.byte	0x4
+  70 000b 01       		.uleb128 0x1
+  71 000c 474E5520 		.ascii "GNU C11 6.3.0 -mtune=generic -march=i586 -g\0"
+  71      43313120 
+  71      362E332E 
+  71      30202D6D 
+  71      74756E65 
+  72 0038 0C       		.byte	0xc
+  73 0039 68656C6C 		.ascii "hello.c\0"
+  73      6F2E6300 
+  74 0041 483A5C30 		.ascii "H:\\0\\New MAAM\\01 - C Programming Language\\01 - Lecture\\00 - Basic C\\Hello\0"
+  74      5C4E6577 
+  74      204D4141 
+  74      4D5C3031 
+  74      202D2043 
+  75 008b 00000000 		.long	Ltext0
+  76 008f 59000000 		.long	Letext0-Ltext0
+  77 0093 00000000 		.secrel32	Ldebug_line0
+  78 0097 02       		.uleb128 0x2
+  79 0098 04       		.byte	0x4
+  80 0099 07       		.byte	0x7
+  81 009a 756E7369 		.ascii "unsigned int\0"
+  81      676E6564 
+  81      20696E74 
+  81      00
+  82 00a7 02       		.uleb128 0x2
+  83 00a8 02       		.byte	0x2
+  84 00a9 07       		.byte	0x7
+  85 00aa 73686F72 		.ascii "short unsigned int\0"
+  85      7420756E 
+  85      7369676E 
+  85      65642069 
+  85      6E7400
+  86 00bd 02       		.uleb128 0x2
+  87 00be 04       		.byte	0x4
+  88 00bf 05       		.byte	0x5
+  89 00c0 6C6F6E67 		.ascii "long int\0"
+  89      20696E74 
+  89      00
+  90 00c9 02       		.uleb128 0x2
+  91 00ca 08       		.byte	0x8
+  92 00cb 05       		.byte	0x5
+  93 00cc 6C6F6E67 		.ascii "long long int\0"
+  93      206C6F6E 
+  93      6720696E 
+  93      7400
+  94 00da 02       		.uleb128 0x2
+  95 00db 04       		.byte	0x4
+  96 00dc 05       		.byte	0x5
+  97 00dd 696E7400 		.ascii "int\0"
+  98 00e1 02       		.uleb128 0x2
+  99 00e2 01       		.byte	0x1
+ 100 00e3 06       		.byte	0x6
+ 101 00e4 63686172 		.ascii "char\0"
+ 101      00
+ 102 00e9 03       		.uleb128 0x3
+ 103 00ea 5F696F62 		.ascii "_iobuf\0"
+ 103      756600
+ 104 00f1 20       		.byte	0x20
+ 105 00f2 02       		.byte	0x2
+ 106 00f3 D2       		.byte	0xd2
+ 107 00f4 70010000 		.long	0x170
+ 108 00f8 04       		.uleb128 0x4
+ 109 00f9 5F707472 		.ascii "_ptr\0"
+ 109      00
+ 110 00fe 02       		.byte	0x2
+ 111 00ff D4       		.byte	0xd4
+ 112 0100 70010000 		.long	0x170
+ 113 0104 00       		.byte	0
+ 114 0105 04       		.uleb128 0x4
+ 115 0106 5F636E74 		.ascii "_cnt\0"
+ 115      00
+ 116 010b 02       		.byte	0x2
+ 117 010c D5       		.byte	0xd5
+ 118 010d DA000000 		.long	0xda
+ 119 0111 04       		.byte	0x4
+ 120 0112 04       		.uleb128 0x4
+ 121 0113 5F626173 		.ascii "_base\0"
+ 121      6500
+ 122 0119 02       		.byte	0x2
+ 123 011a D6       		.byte	0xd6
+ 124 011b 70010000 		.long	0x170
+ 125 011f 08       		.byte	0x8
+ 126 0120 04       		.uleb128 0x4
+ 127 0121 5F666C61 		.ascii "_flag\0"
+ 127      6700
+ 128 0127 02       		.byte	0x2
+ 129 0128 D7       		.byte	0xd7
+ 130 0129 DA000000 		.long	0xda
+ 131 012d 0C       		.byte	0xc
+ 132 012e 04       		.uleb128 0x4
+ 133 012f 5F66696C 		.ascii "_file\0"
+ 133      6500
+ 134 0135 02       		.byte	0x2
+ 135 0136 D8       		.byte	0xd8
+ 136 0137 DA000000 		.long	0xda
+ 137 013b 10       		.byte	0x10
+ 138 013c 04       		.uleb128 0x4
+ 139 013d 5F636861 		.ascii "_charbuf\0"
+ 139      72627566 
+ 139      00
+ 140 0146 02       		.byte	0x2
+ 141 0147 D9       		.byte	0xd9
+ 142 0148 DA000000 		.long	0xda
+ 143 014c 14       		.byte	0x14
+ 144 014d 04       		.uleb128 0x4
+ 145 014e 5F627566 		.ascii "_bufsiz\0"
+ 145      73697A00 
+ 146 0156 02       		.byte	0x2
+ 147 0157 DA       		.byte	0xda
+ 148 0158 DA000000 		.long	0xda
+ 149 015c 18       		.byte	0x18
+ 150 015d 04       		.uleb128 0x4
+ 151 015e 5F746D70 		.ascii "_tmpfname\0"
+ 151      666E616D 
+ 151      6500
+ 152 0168 02       		.byte	0x2
+ 153 0169 DB       		.byte	0xdb
+ 154 016a 70010000 		.long	0x170
+ 155 016e 1C       		.byte	0x1c
+ 156 016f 00       		.byte	0
+ 157 0170 05       		.uleb128 0x5
+ 158 0171 04       		.byte	0x4
+ 159 0172 E1000000 		.long	0xe1
+ 160 0176 06       		.uleb128 0x6
+ 161 0177 46494C45 		.ascii "FILE\0"
+ 161      00
+ 162 017c 02       		.byte	0x2
+ 163 017d DC       		.byte	0xdc
+ 164 017e E9000000 		.long	0xe9
+ 165 0182 07       		.uleb128 0x7
+ 166 0183 76010000 		.long	0x176
+ 167 0187 8D010000 		.long	0x18d
+ 168 018b 08       		.uleb128 0x8
+ 169 018c 00       		.byte	0
+ 170 018d 09       		.uleb128 0x9
+ 171 018e 5F696F62 		.ascii "_iob\0"
+ 171      00
+ 172 0193 02       		.byte	0x2
+ 173 0194 EF       		.byte	0xef
+ 174 0195 82010000 		.long	0x182
+ 175 0199 0A       		.uleb128 0xa
+ 176 019a 6D61696E 		.ascii "main\0"
+ 176      00
+ 177 019f 01       		.byte	0x1
+ 178 01a0 03       		.byte	0x3
+ 179 01a1 00000000 		.long	LFB10
+ 180 01a5 59000000 		.long	LFE10-LFB10
+ 181 01a9 01       		.uleb128 0x1
+ 182 01aa 9C       		.byte	0x9c
+ 183 01ab 00       		.byte	0
+ 184              		.section	.debug_abbrev,"dr"
+ 185              	Ldebug_abbrev0:
+ 186 0000 01       		.uleb128 0x1
+ 187 0001 11       		.uleb128 0x11
+ 188 0002 01       		.byte	0x1
+ 189 0003 25       		.uleb128 0x25
+ 190 0004 08       		.uleb128 0x8
+ 191 0005 13       		.uleb128 0x13
+ 192 0006 0B       		.uleb128 0xb
+ 193 0007 03       		.uleb128 0x3
+ 194 0008 08       		.uleb128 0x8
+ 195 0009 1B       		.uleb128 0x1b
+ 196 000a 08       		.uleb128 0x8
+ 197 000b 11       		.uleb128 0x11
+ 198 000c 01       		.uleb128 0x1
+ 199 000d 12       		.uleb128 0x12
+ 200 000e 06       		.uleb128 0x6
+ 201 000f 10       		.uleb128 0x10
+ 202 0010 17       		.uleb128 0x17
+ 203 0011 00       		.byte	0
+ 204 0012 00       		.byte	0
+ 205 0013 02       		.uleb128 0x2
+ 206 0014 24       		.uleb128 0x24
+ 207 0015 00       		.byte	0
+ 208 0016 0B       		.uleb128 0xb
+ 209 0017 0B       		.uleb128 0xb
+ 210 0018 3E       		.uleb128 0x3e
+ 211 0019 0B       		.uleb128 0xb
+ 212 001a 03       		.uleb128 0x3
+ 213 001b 08       		.uleb128 0x8
+ 214 001c 00       		.byte	0
+ 215 001d 00       		.byte	0
+ 216 001e 03       		.uleb128 0x3
+ 217 001f 13       		.uleb128 0x13
+ 218 0020 01       		.byte	0x1
+ 219 0021 03       		.uleb128 0x3
+ 220 0022 08       		.uleb128 0x8
+ 221 0023 0B       		.uleb128 0xb
+ 222 0024 0B       		.uleb128 0xb
+ 223 0025 3A       		.uleb128 0x3a
+ 224 0026 0B       		.uleb128 0xb
+ 225 0027 3B       		.uleb128 0x3b
+ 226 0028 0B       		.uleb128 0xb
+ 227 0029 01       		.uleb128 0x1
+ 228 002a 13       		.uleb128 0x13
+ 229 002b 00       		.byte	0
+ 230 002c 00       		.byte	0
+ 231 002d 04       		.uleb128 0x4
+ 232 002e 0D       		.uleb128 0xd
+ 233 002f 00       		.byte	0
+ 234 0030 03       		.uleb128 0x3
+ 235 0031 08       		.uleb128 0x8
+ 236 0032 3A       		.uleb128 0x3a
+ 237 0033 0B       		.uleb128 0xb
+ 238 0034 3B       		.uleb128 0x3b
+ 239 0035 0B       		.uleb128 0xb
+ 240 0036 49       		.uleb128 0x49
+ 241 0037 13       		.uleb128 0x13
+ 242 0038 38       		.uleb128 0x38
+ 243 0039 0B       		.uleb128 0xb
+ 244 003a 00       		.byte	0
+ 245 003b 00       		.byte	0
+ 246 003c 05       		.uleb128 0x5
+ 247 003d 0F       		.uleb128 0xf
+ 248 003e 00       		.byte	0
+ 249 003f 0B       		.uleb128 0xb
+ 250 0040 0B       		.uleb128 0xb
+ 251 0041 49       		.uleb128 0x49
+ 252 0042 13       		.uleb128 0x13
+ 253 0043 00       		.byte	0
+ 254 0044 00       		.byte	0
+ 255 0045 06       		.uleb128 0x6
+ 256 0046 16       		.uleb128 0x16
+ 257 0047 00       		.byte	0
+ 258 0048 03       		.uleb128 0x3
+ 259 0049 08       		.uleb128 0x8
+ 260 004a 3A       		.uleb128 0x3a
+ 261 004b 0B       		.uleb128 0xb
+ 262 004c 3B       		.uleb128 0x3b
+ 263 004d 0B       		.uleb128 0xb
+ 264 004e 49       		.uleb128 0x49
+ 265 004f 13       		.uleb128 0x13
+ 266 0050 00       		.byte	0
+ 267 0051 00       		.byte	0
+ 268 0052 07       		.uleb128 0x7
+ 269 0053 01       		.uleb128 0x1
+ 270 0054 01       		.byte	0x1
+ 271 0055 49       		.uleb128 0x49
+ 272 0056 13       		.uleb128 0x13
+ 273 0057 01       		.uleb128 0x1
+ 274 0058 13       		.uleb128 0x13
+ 275 0059 00       		.byte	0
+ 276 005a 00       		.byte	0
+ 277 005b 08       		.uleb128 0x8
+ 278 005c 21       		.uleb128 0x21
+ 279 005d 00       		.byte	0
+ 280 005e 00       		.byte	0
+ 281 005f 00       		.byte	0
+ 282 0060 09       		.uleb128 0x9
+ 283 0061 34       		.uleb128 0x34
+ 284 0062 00       		.byte	0
+ 285 0063 03       		.uleb128 0x3
+ 286 0064 08       		.uleb128 0x8
+ 287 0065 3A       		.uleb128 0x3a
+ 288 0066 0B       		.uleb128 0xb
+ 289 0067 3B       		.uleb128 0x3b
+ 290 0068 0B       		.uleb128 0xb
+ 291 0069 49       		.uleb128 0x49
+ 292 006a 13       		.uleb128 0x13
+ 293 006b 3F       		.uleb128 0x3f
+ 294 006c 19       		.uleb128 0x19
+ 295 006d 3C       		.uleb128 0x3c
+ 296 006e 19       		.uleb128 0x19
+ 297 006f 00       		.byte	0
+ 298 0070 00       		.byte	0
+ 299 0071 0A       		.uleb128 0xa
+ 300 0072 2E       		.uleb128 0x2e
+ 301 0073 00       		.byte	0
+ 302 0074 3F       		.uleb128 0x3f
+ 303 0075 19       		.uleb128 0x19
+ 304 0076 03       		.uleb128 0x3
+ 305 0077 08       		.uleb128 0x8
+ 306 0078 3A       		.uleb128 0x3a
+ 307 0079 0B       		.uleb128 0xb
+ 308 007a 3B       		.uleb128 0x3b
+ 309 007b 0B       		.uleb128 0xb
+ 310 007c 27       		.uleb128 0x27
+ 311 007d 19       		.uleb128 0x19
+ 312 007e 11       		.uleb128 0x11
+ 313 007f 01       		.uleb128 0x1
+ 314 0080 12       		.uleb128 0x12
+ 315 0081 06       		.uleb128 0x6
+ 316 0082 40       		.uleb128 0x40
+ 317 0083 18       		.uleb128 0x18
+ 318 0084 9642     		.uleb128 0x2116
+ 319 0086 19       		.uleb128 0x19
+ 320 0087 00       		.byte	0
+ 321 0088 00       		.byte	0
+ 322 0089 00       		.byte	0
+ 323              		.section	.debug_aranges,"dr"
+ 324 0000 1C000000 		.long	0x1c
+ 325 0004 0200     		.word	0x2
+ 326 0006 00000000 		.secrel32	Ldebug_info0
+ 327 000a 04       		.byte	0x4
+ 328 000b 00       		.byte	0
+ 329 000c 0000     		.word	0
+ 330 000e 0000     		.word	0
+ 331 0010 00000000 		.long	Ltext0
+ 332 0014 59000000 		.long	Letext0-Ltext0
+ 333 0018 00000000 		.long	0
+ 334 001c 00000000 		.long	0
+ 335              		.section	.debug_line,"dr"
+ 336              	Ldebug_line0:
+ 337 0000 55000000 		.section	.debug_str,"dr"
+ 337      02003A00 
+ 337      00000101 
+ 337      FB0E0D00 
+ 337      01010101 
+ 338              		.ident	"GCC: (MinGW.org GCC-6.3.0-1) 6.3.0"

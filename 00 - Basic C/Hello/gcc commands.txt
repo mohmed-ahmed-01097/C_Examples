@@ -1,0 +1,39 @@
+============================================================================================================|
+-	gcc												|														|
+-	gcc –version									|	Get gcc version.									|
+-	gcc --help										|	Get gcc help										|
+============================================================================================================|
+-	gcc hello.c -o app.exe							|	Preprocess, compile, link, and generate executable.	|
+-	app.exe											|	Run executable										|
+-	gcc -E hello.c -o hello.i						|	Preprocess only										|
+-	gcc -S hello.c -o hello.asm						|	Compile but don’t assemble.							|
+-	gcc -c hello.c -o hello.o						|	Compile and assemble but don’t link					|
+-	gcc hello.o -o app.exe							|	Link object files									|
+-	gcc -Wa,-adhln -g -c hello.c > out.interleaved	|	Show assembly code with c code						|
+============================================================================================================|	
+	Static linking									|														|	
+-	gcc -c print.c -o print.o						|	Archive the object code inside a library			|
+-	ar rcs print.lib print.o						|	Statically link the library to source file			|
+-	gcc hello.c print.lib -o app.exe				|														|
+============================================================================================================|	
+	Dynamic linking									|														|
+-	gcc -shared print.c -o print.dll				|	Generate the shared library							|
+-	gcc hello.c -L. -lprint -o app.exe				|	Dynamic link the library to source file				|
+-	gcc hello.c print.dll -o app.exe				|	Or this command										|
+============================================================================================================|
+	Debugging information							|														|	
+-	gcc -g hello.c -o app.exe						|														|
+-	gdb app.exe										|	Start program debugging								|
+-	(gdb)b hello.c:5								|	Breakpoint											|
+-	(gdb)r											|	Start												|
+-	(gdb)c											|	Continue											|
+-	(gdb)s											|	Step one line										|
+-	(gdb)display y									|	Show y variable										|
+-	(gdb)quit										|	Exit 												|
+============================================================================================================|
+
+
+
+
+
+
