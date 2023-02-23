@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1675621372 source:h:\0\new maam\01 - c programming language\01 - lecture\lec projects\file\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
