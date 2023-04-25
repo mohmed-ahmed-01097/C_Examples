@@ -1,0 +1,5 @@
+A test consisting of 25 multiple-choice items is administered to a batch of 3 students. Correct answers and student responses are tabulated. The algorithm for evaluating the answers of students is as follows:
+1. Read correct answers into an array.
+2. Read the responses of a student and count the correct ones.
+3. Repeat step-2 for each student.
+4. Print the results..

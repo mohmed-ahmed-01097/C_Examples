@@ -1,0 +1,1 @@
+My Café wants you to write a program to take orders from the Internet. Your program asks forthe item, its price, and if overnight shipping is wanted. Regular shipping for items under $10 is$2.00; for items $10 or more shipping is $3.00. For overnight delivery add $5.00
