@@ -101,23 +101,21 @@ Squeue* initQueue (void){
      return (Squeue*)&queue;
 }
 u8 isEmpty(Squeue *queue){
-	return (queue->front == -1) && (queue->rear == -1);
+	return (queue->front == queue->rear) && (queue->rear == -1);
 }
 u8 isFull (Squeue *queue){
-	if ((queue->rear > queue->front) || ((queue->front == -1) && (queue->rear == -1)))
-		return (queue->rear - queue->front == MAX_QUEUE);
-	return ((MAX_QUEUE + queue->rear - queue->front) == MAX_QUEUE);
+	return (queue->rear != -1) && (queue->front == queue->rear);
 }
 
 void Enqueue(Squeue *queue ,u8 data){
    if (isFull(queue))     return;
-   if (++queue->rear >= MAX_QUEUE)     queue->rear = 0;
+   queue->rear = (queue->rear + 1) % MAX_QUEUE;
    queue->data[queue->rear] = data;
    printf("Data [%i] is Enqueued in Queue\n",data);
 }
 void Dequeue(Squeue *queue ,u8 *data){
    if (isEmpty(queue))     return;
-   if (++queue->front >= MAX_QUEUE)     queue->front = 0;
+   queue->front = (queue->front + 1) % MAX_QUEUE;
    *data = queue->data[queue->front];
    if(queue->front == queue->rear){
 		queue->front = -1;		queue->rear  = -1;
@@ -132,9 +130,9 @@ void top(Squeue *queue ,u8 *data){
 
 u8 queue_size(Squeue *queue){
     printf("[%d][%d]",queue->rear, queue->front);
-	if ((queue->rear > queue->front) || ((queue->front == -1) && (queue->rear == -1))){
+	if ((queue->rear == -1) || (queue->rear > queue->front)){
 		return (queue->rear - queue->front);
 	}else{
-		return (MAX_QUEUE + queue->rear - queue->front);
+		return (MAX_QUEUE - queue->front + queue->rear);
 	}
 }
